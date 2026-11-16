@@ -1,3 +1,4 @@
+
 import {
   LayoutDashboard,
   Briefcase,
@@ -6,6 +7,7 @@ import {
   Users,
   Building2,
   Settings,
+  CreditCard,
   PlusCircle,
 } from "lucide-react";
 
@@ -14,14 +16,14 @@ export type Role = "seeker" | "recruiter" | "admin";
 export const dashboardMenu = {
   seeker: [
     {
-      title: "Overview",
+      title: "Dashboard",
       url: "/dashboard",
       icon: LayoutDashboard,
     },
     {
-      title: "My Applications",
-      url: "/dashboard/seeker/applications",
-      icon: FileText,
+      title: "Jobs",
+      url: "/dashboard/seeker/jobs",
+      icon: Briefcase,
     },
     {
       title: "Saved Jobs",
@@ -29,60 +31,77 @@ export const dashboardMenu = {
       icon: Bookmark,
     },
     {
-      title: "My Profile",
-      url: "/dashboard/seeker/profile",
-      icon: Users,
+      title: "Applications",
+      url: "/dashboard/seeker/applications",
+      icon: FileText,
+    },
+    {
+      title: "Billing",
+      url: "/dashboard/seeker/billing",
+      icon: CreditCard,
+    },
+    {
+      title: "Settings",
+      url: "/dashboard/seeker/settings",
+      icon: Settings,
     },
   ],
 
-  recruiter: [
-    {
-      title: "Overview",
-      url: "/dashboard",
-      icon: LayoutDashboard,
-    },
-    {
-      title: "My Jobs",
-      url: "/dashboard/recruiter/jobs",
-      icon: Briefcase,
-    },
-    {
-      title: "Post a Job",
-      url: "/dashboard/recruiter/post-job",
-      icon: PlusCircle,
-    },
-    {
-      title: "Applicants",
-      url: "/dashboard/recruiter/applicants",
-      icon: Users,
-    },
-    {
-      title: "Company",
-      url: "/dashboard/recruiter/company",
-      icon: Building2,
-    },
-  ],
+ 
+recruiter: [
+  {
+    title: "Dashboard",
+    url: "/dashboard",
+    icon: LayoutDashboard,
+  },
+  {
+    title: "Add Job",
+    url: "/dashboard/recruiter/jobs/new",
+    icon: PlusCircle,
+  },
+  {
+    title: "Manage Jobs",
+    url: "/dashboard/recruiter/jobs",
+    icon: Briefcase,
+  },
+  {
+    title: "Applicants",
+    url: "/dashboard/recruiter/applicants",
+    icon: Users,
+  },
+  {
+    title: "Settings",
+    url: "/dashboard/recruiter/company",
+    icon: Building2,
+  },
+],
+
 
   admin: [
     {
-      title: "Overview",
+      title: "Dashboard",
       url: "/dashboard",
       icon: LayoutDashboard,
     },
     {
-      title: "Manage Users",
+      title: "Users",
       url: "/dashboard/admin/users",
       icon: Users,
-    },
-    {
-      title: "Manage Jobs",
-      url: "/dashboard/admin/jobs",
-      icon: Briefcase,
     },
     {
       title: "Companies",
       url: "/dashboard/admin/companies",
       icon: Building2,
+    },
+    {
+      title: "Jobs",
+      url: "/dashboard/admin/jobs",
+      icon: Briefcase,
+    },
+    {
+      title: "Payments",
+      url: "/dashboard/admin/payments",
+      icon: CreditCard,
     },
     {
       title: "Settings",
